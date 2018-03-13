@@ -67,9 +67,9 @@ div .DM {
   <p>
     People
   </p>
-  <table style="border:3px solid black"> 
-    <tr> 
-	  <th> ID </th> 
+  <table style="border:3px solid black">
+    <tr>
+	  <th> ID </th>
 	  <th> Name </th>
 	  <th> UniNO </th>
 	</tr>
@@ -84,14 +84,14 @@ div .DM {
 	  <td> NULL </td>
 	</tr>
   </table>
-  
+
   <h5>
   </h5>
-  
+
   <p> University </p>
-  <table style="border:3px solid black"> 
-    <tr> 
-	  <th> ID </th> 
+  <table style="border:3px solid black">
+    <tr>
+	  <th> ID </th>
 	  <th> Name </th>
 	  <th> Address </th>
 	</tr>
@@ -106,63 +106,63 @@ div .DM {
 	  <td> NULL </td>
 	</tr>
   </table>
-  
-  
-  
+
+
+
   <p> The way this information would be presented as a directed graph is: </p>
-  <img src="Arjun/Images/DirectMappingGraph.png">
-  
+  <img src="Arjun/Images/DirectMappingGraph.png" alt="DirectMappingGraph">
+
   </center>
-  
+
   <div class="DM">
   <p>
   General Structure </p><p>
   &lt Subject &gt &lt Predicate &gt &lt Definition &gt </p><p>
 
-  @base &lt http://www.someexample.com/ &gt . </p><p> 
+  @base &lt http://www.someexample.com/ &gt . </p><p>
 
 
   &lt People/ID=01 &gt rdf:type &lt People &gt . </p><p>
   &lt People/ID=01 &gt &lt People#ID &gt 01 . </p><p>
-  &lt People/ID=01 &gt &lt People#Name &gt “SMITH” . </p><p>
+  &lt People/ID=01 &gt &lt People#Name &gt "SMITH" . </p><p>
   &lt People/ID=01 &gt &lt People#UniNO &gt 01. </p><p>
   &lt People/ID=01 &gt &lt People#ref-UniNO &gt &lt University/ID=01 &gt . </p><p>
 
   &lt People/ID=02&gt rdf:type &lt People&gt . </p><p>
   &lt People/ID=02&gt &lt People#ID&gt 02 . </p><p>
-  &lt People/ID=02&gt &lt People#Name&gt “JAMES” . </p><p>
+  &lt People/ID=02&gt &lt People#Name&gt "JAMES" . </p><p>
 
 
   &lt University/ID=01&gt rdf:type &lt University&gt . </p><p>
   &lt University/ID=01&gt &lt University#ID&gt 01 . </p><p>
-  &lt University/ID=01&gt &lt University#Name&gt “Imperial” . </p><p>
-  &lt University/ID=01&gt &lt University#Address&gt “SOME ADDRESS” . </p><p>
+  &lt University/ID=01&gt &lt University#Name&gt "Imperial" . </p><p>
+  &lt University/ID=01&gt &lt University#Address&gt "SOME ADDRESS" . </p><p>
 
   &lt University/ID=02&gt rdf:type &lt University&gt . </p><p>
   &lt University/ID=02&gt &lt University#ID&gt 02 . </p><p>
-  &lt University/ID=02&gt &lt University#NAME&gt “UCL” . </p><p>
-  
+  &lt University/ID=02&gt &lt University#NAME&gt "UCL" . </p><p>
+
   </p>
-  
+
   </div>
-  
-  <div style="padding: 0% 15%"> 
-  <p> 
+
+  <div style="padding: 0% 15%">
+  <p>
   So what we do is we take each row in the table and create a triple with a common subject.
   The @base notation tells us what domain we will be using and we will append the subject to the base.
   We know which subject we are talking about because of the Unique Identifier (PK), in this case ID.
   The predicate is again constructed by appending something to the base, in this case the table name followed by the column name.
   The definition is either an input or a pointer to another Subject in our graph.
-  We start by saying that the Subject is an instance of the class people and then we “say things” about it.
+  We start by saying that the Subject is an instance of the class people and then we "say things" about it.
   We should also convert the strings into their safe versions, by replacing characters such as spaces with their percent-encoded counterpart.
   </p>
   </div>
 
-  
+
   <center>
-  
+
   <p> We will now see a different example: </p>
-  
+
   <p> People </p>
   <table>
     <tr>
@@ -181,7 +181,7 @@ div .DM {
 	  <td> NULL </td>
 	</tr>
   </table>
-  
+
   <p> University </p>
   <table>
     <tr>
@@ -200,32 +200,69 @@ div .DM {
 	  <td> NULL </td>
 	</tr>
   </table>
-  
-  
+
+
   <p> Let's assume that People has no PK and UniNO and UNIName form a FK that reference University </p>
   <p> The way we reference the table is: </p>
 
   </center>
-  
+
   <div class="DM">
-  
+
   <p>
   @base  &lt http://www.someexample.com/ &gt  . </p>
   <p></p>
 
   <p>
   _:a rdf:type &lt People &gt .</p><p>
-  _:a &lt People#Name &gt “SMITH” .</p><p>
+  _:a &lt People#Name &gt "SMITH" .</p><p>
   _:a &lt People#UniNO &gt 01 .</p><p>
-  _:a &lt People#UniName &gt “Imperial” .</p><p>
+  _:a &lt People#UniName &gt "Imperial" .</p><p>
   _:a &lt People#ref-UniNO;UniName &gt &lt University/ID=01 &gt .</p><p>
   </p>
-  
+
   <p>
   _:b rdf:type &lt People &gt .</p><p>
-  _:b &lt People#Name &gt “JAMES” .</p><p>
-  
+  _:b &lt People#Name &gt "JAMES" .</p><p>
+
   </div>
+
+  <center>
+    <p> The part for University doesn't change. </p>
+    <p> To see more about the direct mapping conventions click
+      <a href="https://www.w3.org/TR/rdb-direct-mapping/"> here</a> .</p>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2>SPARQL Queries </h2>
+    <div style="padding: 0% 15%">
+    <p> In general, a SPARQL query contains a set of triple patterns called a basic graph pattern.
+       This structure matches RDF triples with the exception that each component of the triple can be a variable.
+       The basic graph pattern is then matched with a subgraph of the RDF data.</p>
+    </div>
+    <img src="Arjun/Images/SPARQL simple query.bmp" alt="Simple SPARQL Query">
+    <div style="padding: 0% 15%">
+      <p>One clear advantage SPARQL has over SQL is that it can operate on any database that can be viewed as RDF via a mapping software (such as RDB2RDF),
+        while maintaining the same functionality SQL has.
+        Another powerful capability of SPARQL that we'll showcase below is that simple graph patterns can be combined,
+         in a relatively natural manner,
+          in order to explore more elaborate relations in the data. </p>
+    </div>
+    <h2></h2>
+    <h3>A simple union and join example</h3>
+    <div style="padding 0% 15%">
+      <p>The union of patters 'John'->'has son'-> X and 'John'->'has daughter'-> X
+        will have as result all of John's sons and daughters. </p>
+    </div>
+    <img src="Arjun/Images/SPARQL union.bmp" alt="SPARQL Union">
+    <div style="padding: 0% 15%">
+      <p>The join of two or more basic graph patterns is called a group graph pattern.
+        Unlike the union, join requires that both patters are matched. So, a join of
+        'John'->'has son'->Y and 'Y'->'has son'-> 'Z' will have as matching solutions
+        the sons of John's son.</p>
+    </div>
+    <img src="Arjun/Images/SPARQL join.bmp" alt="SPARQL Join">
+  </center>
 
 
 </div>

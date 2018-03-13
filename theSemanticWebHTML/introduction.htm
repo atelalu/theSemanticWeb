@@ -6,6 +6,11 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #EEEEEE;
+}
+
+html * {
+  font-size: 18px !important;
 }
 
 .topnav {
@@ -31,32 +36,109 @@ body {
   background-color: #4CAF50;
   color: white;
 }
+
+.button a {
+
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 17px 40px;
+  border:2px solid black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  magin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button a:hover {
+    background-color: #000000;
+    color: white;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropbtn:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 </style>
 </head>
 <body>
 
-<div class="topnav">
-  <a href="mainPage.htm">Home</a>
-  <a class="active" href="introduction.htm">Introduction</a>
-  <a href="RDF_DirectMapping.htm">RDF and Direct Mapping</a>
-  <a href="SWforHG.htm">Semantic Web for Healthcare and Governments</a>
-  <a href="ProsAndCons.htm">Advantages and Disadvantages</a>
-  <a href="Alex.htm">Alex</a>
-  <a href="Arjun.htm">Arjun</a>
-  <a href="Luca.htm">Luca</a>
-  <a href="Ruxi.htm">Ruxi</a>
-  <a href="Sources.htm">Sources</a>
-</div>
+  <div class="topnav">
+    <a href="mainPage.htm">Home</a>
+    <a class="active" href="introduction.htm">Introduction</a>
+    <a href="RDF_DirectMapping.htm">RDF and Direct Mapping</a>
+    <a href="SWforHG.htm">Semantic Web for Healthcare and Governments</a>
+    <a href="ProsAndCons.htm">Advantages and Disadvantages</a>
+    <div class="dropdown">
+      <button class="dropbtn">Personal Pages</button>
+      <div class="dropdown-content">
+        <a href="Alex.htm">Alex</a>
+        <a href="Arjun.htm">Arjun</a>
+        <a href="Luca.htm">Luca</a>
+        <a href="Ruxi.htm">Ruxi</a>
+      </div>
+    </div>
+    <a href="Sources.htm">Sources</a>
+  </div>
 
 <div style="padding-left:16px">
-  <h2>Introduction on the Semantic Web</h2>
-  <p> The best definition of this concept may be “The Semantic Web is an extension of the current web in which information is given well-defined meaning, 
-better enabling computers and people to work in cooperation"(presented in the Scientific Article “The Sematic Web” by Berners Lee). 
-The inventor thought that the Web can intuit more the users’ needs and how to perform them.
+  <center>
+    <h2>Introduction on the Semantic Web</h2>
+  </center>
+  <br>
+  
+  <p> The best definition of this concept may be "The Semantic Web is an extension of the current web in which information is given well-defined meaning,
+better enabling computers and people to work in cooperation"(presented in the Scientific Article "The Sematic Web" by Berners Lee).
+The inventor thought that the Web can intuit more the users" needs and how to perform them.
 </p>
 <p>But what exactly is the Semantic Web?
 </p>
-<p>Every language is characterized by Syntax and Semantic. Syntax concerns with grammar, whilst Semantics studies the meaning. 
+<p>Every language is characterized by Syntax and Semantic. Syntax concerns with grammar, whilst Semantics studies the meaning.
 	<ul>
 		<li>The syntaxes can be different, but they have the same semantic: (e.g. x ++ / x += 1/ x = x+1)</li>
 	</ul>
@@ -70,14 +152,15 @@ The Semantic Web concerns with concepts, recognizing persons, locations, movies 
 <p>
 	<ul>
 		<li>RDF (Resource Description Framework): a standard model for data interchange on the Web (data modelling language for Semantic Web)</li>
-		<li>SPARQL (SPARQL Protocol and RDF Query Language) – query language for the Semantic Web, designed to query data among the systems</li>
-		<li>OWL (Web Ontology Language) – the schema language of the Semantic Web designed to represent complex information about groups of things, relationship between them</li>
+		<li>SPARQL (SPARQL Protocol and RDF Query Language) : query language for the Semantic Web, designed to query data among the systems</li>
+		<li>OWL (Web Ontology Language) : the schema language of the Semantic Web designed to represent complex information about groups of things, relationship between them</li>
 	</ul>
 </p>
+<hr>
 <p><b>RDF</b>:
 </p>
-<p>RDF is designed for describing the resources through Web and it can also recognize things with the help of URIs (Uniform Resource Identifiers). 
-<br>For describing things, RDF uses simple statements (Triples:  Subject – Predicate- Object). Though, the most promising application of RDF is not in encoding information about Web resources,
+<p>RDF is designed for describing the resources through Web and it can also recognize things with the help of URIs (Uniform Resource Identifiers).
+<br>For describing things, RDF uses simple statements (Triples:  Subject - Predicate- Object). Though, the most promising application of RDF is not in encoding information about Web resources,
 but modelling a relational database.
 </p>
 <img src ="Arjun/Images/photo1.jpg" height="40%" width="40%">
@@ -93,7 +176,7 @@ but modelling a relational database.
 but also abstract ones. For example, a person can have one URI used for referring to that person in the ontologies.
 				</li>
 				<li>URLs (Uniform Resource Locators) that are the URIs used for setting out the location of the
-objects/things. Likewise URIs start with a protocol identifier(indicates the protocol to be used for obtaining the resource), URLs are composed of a protocol, 
+objects/things. Likewise URIs start with a protocol identifier(indicates the protocol to be used for obtaining the resource), URLs are composed of a protocol,
 http used to access the source at the specified location.
 				</li>
 
@@ -106,8 +189,9 @@ http used to access the source at the specified location.
 
 </p>
 <img src ="Arjun/Images/photo2.jpg" height="40%" width="40%">
+<hr>
 <p><b>SPARQL:</b></p>
-<p>In other words, SPARQL allows users to query data from databases that can be mapped to RDF. It matches the patterns in the query to the triples in the dataset, 
+<p>In other words, SPARQL allows users to query data from databases that can be mapped to RDF. It matches the patterns in the query to the triples in the dataset,
 to find the solution for the variables (previously mentioned subject/predicate/object).</p>
 <p>There are four types of queries:</p>
 <p>
@@ -119,11 +203,16 @@ to find the solution for the variables (previously mentioned subject/predicate/o
 	</ul>
 </p>
 <p><b>OWL:</b></p>
-<p>OWL is a computational logic-based language, which expresses information 
+<hr>
+<p>OWL is a computational logic-based language, which expresses information
 in a machine-readable way such that it is possible to verify consistency or to make implicit information explicit.</p>
- 
 
 
+
+
+</div>
+<div class="button" style="float:right">
+  <a href="RDF_DirectMapping.htm">Next</a>
 </div>
 
 </body>

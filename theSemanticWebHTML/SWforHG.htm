@@ -6,6 +6,11 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #EEEEEE;
+}
+
+html * {
+  font-size: 18px !important;
 }
 
 table, th, td {
@@ -22,8 +27,8 @@ table, th, td {
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none
-  font-size: 20px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .topnav a:hover {
@@ -35,49 +40,126 @@ table, th, td {
   background-color: #4CAF50;
   color: white;
 }
+
+.button a {
+
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 17px 40px;
+  border:2px solid black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  magin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button a:hover {
+    background-color: #000000;
+    color: white;
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropbtn:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 </style>
 </head>
 <body>
 
-<div class="topnav">
-  <a href="mainPage.htm">Home</a>
-  <a href="introduction.htm">Introduction</a>
-  <a href="RDF_DirectMapping.htm">RDF and Direct Mapping</a>
-  <a class="active" href="SWforHG.htm">Semantic Web for Healthcare and Governments</a>
-  <a href="ProsAndCons.htm">Advantages and Disadvantages</a>
-  <a href="Alex.htm">Alex</a>
-  <a href="Arjun.htm">Arjun</a>
-  <a href="Luca.htm">Luca</a>
-  <a href="Ruxi.htm">Ruxi</a>
-  <a href="Sources.htm">Sources</a>
-</div>
+  <div class="topnav">
+    <a href="mainPage.htm">Home</a>
+    <a href="introduction.htm">Introduction</a>
+    <a href="RDF_DirectMapping.htm">RDF and Direct Mapping</a>
+    <a class="active" href="SWforHG.htm">Semantic Web for Healthcare and Governments</a>
+    <a href="ProsAndCons.htm">Advantages and Disadvantages</a>
+    <div class="dropdown">
+      <button class="dropbtn">Personal Pages</button>
+      <div class="dropdown-content">
+        <a href="Alex.htm">Alex</a>
+        <a href="Arjun.htm">Arjun</a>
+        <a href="Luca.htm">Luca</a>
+        <a href="Ruxi.htm">Ruxi</a>
+      </div>
+    </div>
+    <a href="Sources.htm">Sources</a>
+  </div>
 
 <div style="padding-left:16px">
   <center>
 
 
     <h2>How will Semantic Web help Governments?</h2>
+  </center>
 
-    <p style="font-size: 20px">
-    No matter where you fall in debates over free software,  <br>
-    there's one type of information that is unarguably meant to be free, <br>
-    and that's information about our government. <br>
+  <div style="padding:0% 15%;">
 
-    <br>
+    <p>
+    No matter where you fall in debates over free software,
+    there's one type of information that is unarguably meant to be free,
+    and that's information about our government.
+    </p><p>
 
-    The more knowledge citizens have about government the better. <br>
+
+    The more knowledge citizens have about government the better.
     So how can we use the Semantic Web to make it easier to get that knowledge, and to foster civic participation?
+    </p><p>
 
-    <br>
-    <br>
-    <br>
-    Every government stores data about its people and its institutions. <br>
-    This data can vary from high school enrollment to proposed bills. <br>
-    If this data is stored keeping in mind an Ontology and using RDFa, users of the database will have much more power at their command.  <br>
-    <br>
-    The data will be connected by relationships.  <br>
-    It is these relationships between data that will enable users to perform even more accurate searches. <br>
+    Every government stores data about its people and its institutions.
+    This data can vary from high school enrollment to proposed bills.
+    If this data is stored keeping in mind an Ontology and using RDFa, users of the database will have much more power at their command.
+    </p><p>
+    The data will be connected by relationships.
+    It is these relationships between data that will enable users to perform even more accurate searches.
     </p>
+  </div>
+
+  <center>
 
     <br>
     <hr>
@@ -87,6 +169,8 @@ table, th, td {
     <img src= "Arjun/Images/infographic semantic.png" height="70%" width="70%">
     <hr>
 
+</center>
+  <div style="padding: 0% 27% 0% 35%">
     <h2>
       European Data Portal (EDP)
     </h2>
@@ -95,21 +179,26 @@ table, th, td {
       There are numerous datasets available online from various countries. <br>
       Furthermore, anyone can run SPARQL queries on this website.
     </p>
+  </div>
+  <center>
     <img src= "Arjun/Images/EDP datasets increase.png" height="50%" width="50%">
+  </center>
 
     <hr>
 
+
+    <div style="padding:0% 15%">
     <p>
       <h2>
         Example US website : govtrack.us
-      </h2> 
+      </h2>
       The US government has been posting relevant information online, but in scattered locations. <br>
-      For instance, legislation is posted in one place and votes on the very same legislation in another. <br> 
+      For instance, legislation is posted in one place and votes on the very same legislation in another. <br>
       Gathering the information in one place and in a common format gives rise to new ways of mixing the information together. <br>
       <br>
       <h2>
         Questions you can ask:
-      </h2> 
+      </h2>
       1) What's the population of each senator's state? <br>
       2) Which state has more politicians who have proposed bills for Topic X <br>
 
@@ -119,76 +208,93 @@ table, th, td {
       The most important factor is that results are more accurate than current search engines. <br>
 
     </p>
-
+    </div>
     <hr>
 
+    <div style="padding:0% 15%">
     <h2>
-      Scientists using Semantic Web enabled Databases 
+      Scientists using Semantic Web enabled Databases
     </h2>
     <p style="font-size: 20px">
-      Tim Berners Lee vigorously campaigned for Open Data and Linked Data in a TED talk given by him. <br>
-      Most research is conducted separately and the data is stored in different locations. <br>
-      If this data would be made Semantic Web enabled using Ontologies and RDFa, Scientists will be able to get an exponentially higher degree of accuracy. <br>
-      A scientist may ask : "What proteins are involved in signal transduction and also related to pyramidal neurons?" <br>
-      Google does not have an accurate answer for this query but a Semantic Web enabled database gives 32 accurate results. (Shown below)<br>
+      Tim Berners Lee vigorously campaigned for Open Data and Linked Data in a TED talk given by him.
+      Most research is conducted separately and the data is stored in different locations.
+      If this data would be made Semantic Web enabled using Ontologies and RDFa, Scientists will be able to get an exponentially higher degree of accuracy.
+      A scientist may ask : "What proteins are involved in signal transduction and also related to pyramidal neurons?"
+      Google does not have an accurate answer for this query but a Semantic Web enabled database gives 32 accurate results. (Shown below)
     </p>
+  </div>
+
+    <center>
 
     <img src= "Arjun/Images/tim-ted-search.png" height="40%" width="40%">
     <img src= "Arjun/Images/tim-ted-search2.png" height="40%" width="40%">
+<<<<<<< HEAD
     
     <p>
       -Images taken from Sir Tim Berners Lee's TED talk. 
     </p>
+=======
+
+>>>>>>> master
 
     <hr>
 
+    <!-- why do you have Advantages and Disadvantages @Luca cries
     <h2>
       Table to Summarize Benefits of Semantic Web
     </h2>
 
+
     <table style="width:100%">
       <tr>
         <th>With Semantic Web</th>
-        <th>Without Semantic Web</th> 
+        <th>Without Semantic Web</th>
       </tr>
       <tr>
         <td>Focus on Data  :)</td>
-        <td>Focus on Documents   :(</td> 
-        
+        <td>Focus on Documents   :(</td>
+
       </tr>
       <tr>
         <td>Creates relationships between Data</td>
-        <td>Cannot create relationships between Data</td> 
-        
+        <td>Cannot create relationships between Data</td>
+
       </tr>
       <tr>
         <td>Easier to retrieve accurate results from large database</td>
-        <td>Difficult to retrieve accurate results from large database</td> 
-        
+        <td>Difficult to retrieve accurate results from large database</td>
+
       </tr>
       <tr>
         <td>Government Data can be linked by relationships</td>
-        <td>Government Data cannot be linked by relationships</td> 
-        
+        <td>Government Data cannot be linked by relationships</td>
+
       </tr>
       <tr>
         <td>Scientists can contribute their research and get accurate results</td>
-        <td>Scientists can contribute their research but no guarantee of accurate results</td> 
-        
+        <td>Scientists can contribute their research but no guarantee of accurate results</td>
+
       </tr>
     </table>
+  -->
 
     <br>
     <br>
 
+<!--
     <h2>
       Semantic Web is the need of the hour!!
     </h2>
+-->
 
   </center>
 
-  
 
+
+</div>
+
+<div class="button" style="float:right">
+  <a href="ProsAndCons.htm">Next</a>
 </div>
 
 </body>

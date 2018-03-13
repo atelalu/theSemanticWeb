@@ -57,34 +57,120 @@ html * {
     background-color: #000000;
     color: white;
 }
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropbtn:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 </style>
 </head>
 <body>
 
-<div class="topnav">
-  <a href="mainPage.htm">Home</a>
-  <a href="introduction.htm">Introduction</a>
-  <a href="RDF_DirectMapping.htm">RDF and Direct Mapping</a>
-  <a href="SWforHG.htm">Semantic Web for Healthcare and Governments</a>
-  <a href="ProsAndCons.htm">Advantages and Disadvantages</a>
-  <a href="Alex.htm">Alex</a>
-  <a href="Arjun.htm">Arjun</a>
-  <a href="Luca.htm">Luca</a>
-  <a href="Ruxi.htm">Ruxi</a>
-  <a class="active" href="Sources.htm">Sources</a>
-</div>
+  <div class="topnav">
+    <a href="mainPage.htm">Home</a>
+    <a href="introduction.htm">Introduction</a>
+    <a href="RDF_DirectMapping.htm">RDF and Direct Mapping</a>
+    <a href="SWforHG.htm">Semantic Web for Healthcare and Governments</a>
+    <a href="ProsAndCons.htm">Advantages and Disadvantages</a>
+    <div class="dropdown">
+      <button class="dropbtn">Personal Pages</button>
+      <div class="dropdown-content">
+        <a href="Alex.htm">Alex</a>
+        <a href="Arjun.htm">Arjun</a>
+        <a href="Luca.htm">Luca</a>
+        <a href="Ruxi.htm">Ruxi</a>
+      </div>
+    </div>
+    <a class="active" href="Sources.htm">Sources</a>
+  </div>
 
 <div style="padding-left:16px">
   <center>
-    <h2>TODO</h2>
-    <img src= "Arjun/Images/tim-lee-social-networks.png" height="40%" width="40%">
-
-  <center>
-  <p>
-    SW for healthcare and stuff
-  </p>
+      <h2>Sources</h2>
   </center>
+  <br>
 
+  <p>
+    Semagix.com. <i>Advantage of Semantic Data.</i> [online]
+    Available at: http://www.semagix.com/advantage-of-semantic-data.htm#AdvantageofSemanticData
+  </p>
+  <p>
+    Cambridge Semantics. <i>Introduction to the Semantic Web - Cambridge Semantics.</i> [online]
+    Available at: https://www.cambridgesemantics.com/blog/semantic-university/intro-semantic-web/
+  </p>
+  <p>
+    Ontotext. <i>What is SPARQL - Semantic Search Query Language - Ontotext.</i> [online]
+    Available at: https://ontotext.com/knowledgehub/fundamentals/what-is-sparql/
+  </p>
+  <p>
+    W3.org. <i>The Semantic Web made easy.</i> [online]
+    Available at: https://www.w3.org/RDF/Metalog/docs/sw-easy
+  </p>
+  <p>
+    SearchMicroservices. <i>What is Semantic Web? - Definition from WhatIs.com.</i> [online]
+    Available at: http://searchmicroservices.techtarget.com/definition/Semantic-Web
+  </p>
+  <p>
+    Tauberer, J. <i>What Is RDF.</i> [online] Xml.com.
+    Available at: https://www.xml.com/pub/a/2001/01/24/rdf.html
+  </p>
+  <p>
+    Docs.oracle.com. <i>What Is a URL? (The Java™ Tutorials > Custom Networking > Working with URLs).</i> [online]
+    Available at: https://docs.oracle.com/javase/tutorial/networking/urls/definition.html
+  </p>
+  <p>
+    Semanticweb.org. <i>Uniform Resource Identifier - semanticweb.org.edu.</i> [online]
+    Available at: http://semanticweb.org/wiki/Uniform_Resource_Identifier.html
+  </p>
+  <p>
+    Slideshare.net. <i>Agenda Introduction The Problem Solutions.</i> [online]
+    Available at: https://www.slideshare.net/HatemMahmoud/web-30-the-semantic-web/2-AgendaIntroductionThe_ProblemSolutionsApplicationsSummary
+  </p>
+  <p>
+    W3schools.com. W3Schools Online Web Tutorials. [online]
+    Available at: https://www.w3schools.com/
+  </p>
 
 
 </div>

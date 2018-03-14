@@ -314,12 +314,17 @@ div .DM {
     <h2></h2>
     <hr>
     <h2>SPARQL Queries </h2>
+  </center>
     <div style="padding: 0% 15%">
     <p> In general, a SPARQL query contains a set of triple patterns called a basic graph pattern.
        This structure matches RDF triples with the exception that each component of the triple can be a variable.
        The basic graph pattern is then matched with a subgraph of the RDF data.</p>
     </div>
-    <img src="Arjun/Images/SPARQL simple query.bmp" alt="Simple SPARQL Query">
+
+    <center>
+      <img src="Arjun/Images/SPARQL simple query.bmp" alt="Simple SPARQL Query">
+    </center>
+
     <div style="padding: 0% 15%">
       <p>One clear advantage SPARQL has over SQL is that it can operate on any database that can be viewed as RDF via a mapping software (such as RDB2RDF),
         while maintaining the same functionality SQL has.
@@ -328,21 +333,31 @@ div .DM {
           in order to explore more elaborate relations in the data. </p>
     </div>
     <h2></h2>
-    <h3>A simple union and join example</h3>
+
+    <center>
+      <h3>A simple union and join example</h3>
+    </center>
+
+    <center>
     <div style="padding 0% 15%">
       <p>The union of patters 'John'->'has son'-> X and 'John'->'has daughter'-> X
         will have as result all of John's sons and daughters. </p>
     </div>
-    <img src="Arjun/Images/SPARQL union.bmp" alt="SPARQL Union">
+  </center>
+
+    <center>
+      <img src="Arjun/Images/SPARQL union.bmp" alt="SPARQL Union">
+    </center>
+
     <div style="padding: 0% 15%">
       <p>The join of two or more basic graph patterns is called a group graph pattern.
         Unlike the union, join requires that both patters are matched. So, a join of
         'John'->'has son'->Y and 'Y'->'has son'-> 'Z' will have as matching solutions
         the sons of John's son.</p>
     </div>
-    <img src="Arjun/Images/SPARQL join.bmp" alt="SPARQL Join">
-  </center>
-
+    <center>
+      <img src="Arjun/Images/SPARQL join.bmp" alt="SPARQL Join">
+    </center>
 
 </div>
 <div class="button" style="float:right">
